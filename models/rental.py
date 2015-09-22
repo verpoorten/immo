@@ -2,6 +2,11 @@
 
 from openerp import models, fields, api, exceptions
 from datetime import timedelta
+from dateutil.relativedelta import relativedelta
+import datetime
+import contextlib
+
+
 
 class Rental(models.Model):
     _name = 'immo.rental'
@@ -13,21 +18,62 @@ class Rental(models.Model):
     date_end = fields.Datetime(required=True)  
     rent = fields.Float(required=True, default=500)
     charges = fields.Float(required=True, default=0)
-    note = fields.Char()
-    tenant_ids = fields.One2many('res.partner', 'rental_id',string='Tenants')
+    note = fields.Char()    
+    tenant_ids = fields.Many2many('res.partner', relation='immo_tenant_rental', column1='rental_id', column2='tenant_id')
     revision_ids = fields.One2many('immo.revision', 'rental_id', string="Revision")
     
+    @api.onchange('date_start')
+    def _verify_dates(self):
+        if self.date_start and not self.date_end:            
+            self.date_end = fields.Datetime.to_string(fields.Datetime.from_string(self.date_start) + relativedelta(years=3))
+            
+    @api.one
+    def copy(self, default=None):
+        default = dict(default or {})
+        default['date_start'] =self.date_end
+        return super(Rental, self).copy(default)
+    
+    @api.model
+    def create(self,values):
+        id=super(Rental,self).create(values)
+        default_revision=dict({})
+        default_revision['rent'] = self.rent
+        default_revision['charges'] = self.charges
+        default_revision['rental_id'] = id
+        default_revision['date_start'] = self.date_start
+        default_revision['date_end'] = self.date_end
+ 
+        self.env['immo.revision'].create(default_revision)
+        return id
 
-@api.constrains('date_start','date_end')
-def _check_date_start_end(self):
-    raise exceptions.ValidationError("Lavvvvv date de début est supérieure à la date de fin")
-#     if self.date_start:
-#         if self.date_end:
-#             if fields.Datetime.from_string(self.date_start) > fields.Datetime.from_string(self.date_end):
-#                 raise exceptions.ValidationError("La date de début est supérieure à la date de fin")
-#             else:
-#                 raise exceptions.ValidationError("Lavvvvv date de début est supérieure à la date de fin")
-
+    
+    
+    
+#     @api.one
+#     def create(self):
+#         
+#         return super(Rental, self).create(vals)
+#         default_revision=dict({})
+#         default_revision['rent'] = res.rent
+#         default_revision['charges'] = res.charges
+#         default_revision['rental_id'] = res.rental_id
+#         default_revision['date_start'] = res.date_start
+#         default_revision['date_end'] = res.date_end
+#         
+#         rev= super(Revision, self).create(default_revision)
+        
+#         return res  
+    @api.constrains('date_start','date_end')
+    def _check_date_start_end(self):
+        for record in self:
+            if record.date_start:
+                if record.date_end:
+                    if fields.Datetime.from_string(record.date_start) > fields.Datetime.from_string(record.date_end):
+                        raise exceptions.ValidationError("La date de début est supérieure à la date de fin")
+                    
+                    
+            
+      
 # @api.multi  
 # def copy(self, default=None):
 #     default=dict(default or {})

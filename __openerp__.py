@@ -28,10 +28,10 @@
         'templates.xml',
         'views/building.xml',
         'views/menu.xml',
-        'views/partner.xml',
         'views/rental.xml',
         'views/following.xml',
-        'views/revision.xml'
+        'views/revision.xml',
+        'views/partnerBuilding.xml'
     ],
     # only loaded in demonstration mode
     'demo': [

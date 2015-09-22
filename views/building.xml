@@ -31,16 +31,25 @@
 						<notebook>
 							<page string="Owners">
 								<field name="owner_ids">
-									<tree  editable="true">
+									<tree editable="true">
 										<field name="name" />
 									</tree>
 								</field>
 							</page>
 							<page string="Rentals">
 								<field name="rental_ids">
-									<tree  editable="true">
+									<tree editable="true">
 										<field name="date_start" />
 										<field name="date_end" />
+										<field name="rent" />
+										<field name="charges" />
+										<field name="note" />
+										<field name="tenant_ids" />
+<!-- 										<notebook> -->
+<!-- 										<page string="Locataires"> -->
+<!-- 										<field name="tenant_ids" /> -->
+<!-- 										</page> -->
+<!-- 										</notebook> -->
 									</tree>
 								</field>
 							</page>

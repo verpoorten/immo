@@ -14,5 +14,6 @@ class Building(models.Model):
     zip_code = fields.Char()
     city = fields.Char()
     country = fields.Char(default= "Belgium")
-    owner_ids = fields.One2many('res.partner','building_id', string='Owners')    
-    rental_ids = fields.One2many('immo.rental','building_id', string='Rentals')
+    
+    owner_ids = fields.Many2many('res.partner', relation='immo_owner_building', column1='building_id', column2='owner_id')    
+    rental_ids = fields.One2many('immo.rental','building_id', string='Rentals')     

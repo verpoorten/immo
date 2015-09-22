@@ -10,6 +10,9 @@
 				<tree string="following" colors="green:following_state=='PAYE';red:following_state=='IMPAYE';orange:following_state=='A_VERIFIER'">
 					<field name="following_state" />
 					<field name="rent_expected" />
+<!-- 					<field name="rent_expected" position="attributes"> -->
+<!-- 					<attribute name="attrs">{'readonly':[('revision_id','=','False')]}</attribute> -->
+<!-- 					</field> -->
 					<field name="rent_paid" />
 					<field name="bank_account" />
 					<field name="payement_date" />
