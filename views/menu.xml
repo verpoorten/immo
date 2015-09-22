@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+		<record model="ir.actions.act_window" id="action_list_buildings">
+			<field name="name">Buildings</field>
+			<field name="res_model">immo.building</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			
+		</record>
+		<record model="ir.actions.act_window" id="action_list_partners">
+			<field name="name">Partners</field>
+			<field name="res_model">res.partner</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			
+		</record>
+		<record model="ir.actions.act_window" id="action_list_rentals">
+			<field name="name">Rentals</field>
+			<field name="res_model">immo.rental</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			
+		</record>
+		<record model="ir.actions.act_window" id="action_list_revisions">
+			<field name="name">Revisions</field>
+			<field name="res_model">immo.revision</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form,calendar</field>
+			
+		</record>
+		<record model="ir.actions.act_window" id="action_list_followings">
+			<field name="name">Followings</field>
+			<field name="res_model">immo.following</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form,calendar</field>
+			
+		</record>
+		<menuitem id="main_menu_immo" name="Menu immo" />
+		<menuitem id="menu_immo" name="Building menu" parent="main_menu_immo"/>
+		<menuitem id="menu_building" parent="menu_immo" name="Buildings" action="action_list_buildings"/>
+		<menuitem id="menu_partner" parent="menu_immo" name="Partners" action="action_list_partners"/>
+		<menuitem id="menu_rental" parent="menu_immo" name="Rentals" action="action_list_rentals"/>
+		
+		<menuitem id="menu_revision" parent="menu_immo" name="Revisions" action="action_list_revisions"/>
+		<menuitem id="menu_following" parent="menu_immo" name="Followings" action="action_list_followings"/>
+	</data>
+</openerp>

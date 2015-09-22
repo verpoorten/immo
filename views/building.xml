@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+		<record model="ir.ui.view" id="immo_view_building_tree">
+			<field name="name">immo.view.building_tree</field>
+			<field name="model">immo.building</field>
+			<field name="priority" eval="8" />
+			<field name="arch" type="xml">
+				<tree string="building">
+					<field name="street" />
+					<field name="city" />
+					<field name="description" />
+				</tree>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="building_form_view">
+			<field name="name">building.form</field>
+			<field name="model">immo.building</field>
+			<field name="priority" eval="16" />
+			<field name="arch" type="xml">
+				<form string="Building Form">
+					<group col="4">
+						<field name="street" />
+						<field name="number" />
+						<field name="zip_code" />
+						<field name="city" />
+						<field name="country" />
+						<field name="description" />
+					</group>
+					<sheet>
+						<notebook>
+							<page string="Owners">
+								<field name="owner_ids">
+									<tree  editable="true">
+										<field name="name" />
+									</tree>
+								</field>
+							</page>
+							<page string="Rentals">
+								<field name="rental_ids">
+									<tree  editable="true">
+										<field name="date_start" />
+										<field name="date_end" />
+									</tree>
+								</field>
+							</page>
+						</notebook>
+					</sheet>
+				</form>
+			</field>
+		</record>
+	</data>
+</openerp>
