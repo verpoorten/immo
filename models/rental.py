@@ -35,15 +35,16 @@ class Rental(models.Model):
     
     @api.model
     def create(self,values):
-        id=super(Rental,self).create(values)
-        default_revision=dict({})
-        default_revision['rent'] = self.rent
-        default_revision['charges'] = self.charges
-        default_revision['rental_id'] = id
-        default_revision['date_start'] = self.date_start
-        default_revision['date_end'] = self.date_end
+        new_rental = super(Rental,self).create(values)
+        rev=dict({})
+        rev['rent'] = new_rental.rent
+        rev['charges'] = new_rental.charges
+#         rev['rental_id'] = new_rental.rental_id 
+        rev['rental_id'] = new_rental.id 
+        rev['date_start'] = new_rental.date_start
+        rev['date_end'] = new_rental.date_end
  
-        self.env['immo.revision'].create(default_revision)
+        self.env['immo.revision'].create(rev)
         return id
 
     

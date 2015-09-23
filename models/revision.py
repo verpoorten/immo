@@ -13,3 +13,4 @@ class Revision(models.Model):
     charges = fields.Float(required=True)
     date_start = fields.Datetime()  
     date_end = fields.Datetime()
+    rental_id = fields.Many2one('immo.rental', string='Rental',ondelete="restrict")
