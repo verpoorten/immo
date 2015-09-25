@@ -39,13 +39,13 @@ class Rental(models.Model):
         rev=dict({})
         rev['rent'] = new_rental.rent
         rev['charges'] = new_rental.charges
-#         rev['rental_id'] = new_rental.rental_id 
+
         rev['rental_id'] = new_rental.id 
         rev['date_start'] = new_rental.date_start
         rev['date_end'] = new_rental.date_end
  
         self.env['immo.revision'].create(rev)
-        return id
+        return new_rental
 
     
     
