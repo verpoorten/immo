@@ -1,26 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <openerp>
 	<data>
-		<!--  Tree view -->
+		<!-- Tree view -->
 		<record model="ir.ui.view" id="immo_view_following_tree">
 			<field name="name">immo.view.following_tree</field>
 			<field name="model">immo.following</field>
 			<field name="priority" eval="8" />
 			<field name="arch" type="xml">
-				<tree string="following" colors="green:following_state=='PAYE';red:following_state=='IMPAYE';orange:following_state=='A_VERIFIER'">
+				<tree string="following"
+					colors="green:following_state=='PAYE';red:following_state=='IMPAYE';orange:following_state=='A_VERIFIER'">
 					<field name="following_state" />
-					<field name="rent_expected" />
-<!-- 					<field name="rent_expected" position="attributes"> -->
-<!-- 					<attribute name="attrs">{'readonly':[('revision_id','=','False')]}</attribute> -->
-<!-- 					</field> -->
+					<field name="date_start" />
+					<field name="date_end" />
+					
+<!-- 					<field name="revision_id.rent" /> -->
+					<!-- <field name="rent_expected" position="attributes"> -->
+					<!-- <attribute name="attrs">{'readonly':[('revision_id','=','False')]}</attribute> -->
+					<!-- </field> -->
 					<field name="rent_paid" />
 					<field name="bank_account" />
 					<field name="payement_date" />
-					<field name="expected_payement_date" />
+					<!-- <field name="expected_payement_date" /> -->
 				</tree>
 			</field>
 		</record>
-		<!--  Form view -->
+		<!-- Form view -->
 		<record model="ir.ui.view" id="following_form_view">
 			<field name="name">following.form</field>
 			<field name="model">immo.following</field>
@@ -31,12 +35,12 @@
 						<field name="following_state" />
 						<field name="date_start" />
 						<field name="date_end" />
-						<field name="rent_expected" />
+						<!-- <field name="rent_expected" /> -->
 						<field name="rent_paid" />
 						<field name="bank_account" />
-						
+
 						<field name="payement_date" />
-						<field name="expected_payement_date" />
+						<!-- <field name="expected_payement_date" /> -->
 					</group>
 					<sheet>
 						<notebook>
@@ -49,15 +53,16 @@
 				</form>
 			</field>
 		</record>
-		<!--  Calendar view -->
+		<!-- Calendar view -->
 		<record model="ir.ui.view" id="following_calendar_view">
 			<field name="name">following.calendar</field>
 			<field name="model">immo.following</field>
 
 			<field name="arch" type="xml">
-				<calendar string="following calendrier" date_start="date_start" date_stop="date_end" color="following_state">
-					<field name="following_state"/>
-					<field name="rent_paid"/>
+				<calendar string="following calendrier" date_start="date_start"
+					date_stop="date_end" color="following_state">
+					<field name="following_state" />
+					<field name="rent_paid" />
 				</calendar>
 			</field>
 		</record>

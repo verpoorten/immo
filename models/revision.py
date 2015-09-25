@@ -14,3 +14,4 @@ class Revision(models.Model):
     date_start = fields.Datetime()  
     date_end = fields.Datetime()
     rental_id = fields.Many2one('immo.rental', string='Rental',ondelete="restrict")
+    following_ids = fields.One2many('immo.following','revision_id',string="Suivis")

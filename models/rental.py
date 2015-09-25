@@ -44,7 +44,37 @@ class Rental(models.Model):
         rev['date_start'] = new_rental.date_start
         rev['date_end'] = new_rental.date_end
  
-        self.env['immo.revision'].create(rev)
+        new_rev=self.env['immo.revision'].create(rev)
+        date_fin = fields.Datetime.from_string(new_rev.date_end) 
+        date_d = fields.Datetime.from_string(new_rev.date_start) 
+        date_f = fields.Datetime.from_string(new_rev.date_start) + relativedelta(months=1)
+        while date_f <= date_fin:            
+            fol=dict({})
+            fol['revision_id'] = new_rev.id 
+            fol['following_state'] = 'A_VERIFIER'
+            fol['date_start'] =fields.Datetime.to_string(date_d)
+            fol['date_end'] = fields.Datetime.to_string(date_f)
+            fol['rent_paid'] = -1
+            self.env['immo.following'].create(fol)
+            
+            date_d = date_d + relativedelta(months=1)
+            date_f = date_f + relativedelta(months=1)
+#         fol['bank_account'] = A_VERIFIER
+    
+#     date_start = fields.Datetime()
+#     date_end = fields.Datetime()
+#     payement_date = fields.Datetime() 
+        
+        
+        
+        
+#         fol=dict({})
+#         fol['revision_id'] = new_rev.id 
+#         fol['following_state'] = 'A_VERIFIER'
+#         fol['date_start'] = fields.Datetime.to_string(fields.Datetime.from_string(new_fol.date_start) + relativedelta(months=1))
+#         fol['date_end'] = fields.Datetime.to_string(fields.Datetime.from_string(new_fol.date_start) + relativedelta(months=2))
+#         fol['rent_paid'] = -1
+#         self.env['immo.following'].create(fol)
         return new_rental
 
     
