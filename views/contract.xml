@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+		<record model="ir.ui.view" id="immo_view_contract_tree">
+			<field name="name">immo.view.contract_tree</field>
+			<field name="model">immo.contract</field>
+			<field name="priority" eval="8" />
+			<field name="arch" type="xml">
+				<tree string="contract">
+					<field name="street" />
+					<field name="city" />
+					<field name="description" />
+				</tree>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="contract_form_view">
+			<field name="name">contract.form</field>
+			<field name="model">immo.contract</field>
+			<field name="priority" eval="16" />
+			<field name="arch" type="xml">
+				<form string="contract Form">
+					<group col="4">
+						<field name="description" />
+						<field name="date_end" />
+						<field name="date_start" />
+						
+					</group>
+					<sheet>
+						<notebook>
+						
+							<page string="Building">
+								<field name="building_id"/>
+															
+							</page>
+								<page string="Policy holder">
+								<field name="partner_id"/>
+															
+							</page>
+						</notebook>
+					</sheet>
+				</form>
+			</field>
+		</record>
+	</data>
+</openerp>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+		<record model="ir.ui.view" id="immo_view_expense_tree">
+			<field name="name">immo.view.expense_tree</field>
+			<field name="model">immo.expense</field>
+			<field name="priority" eval="8" />
+			<field name="arch" type="xml">
+				<tree string="expense">
+					<field name="street" />
+					<field name="city" />
+					<field name="description" />
+				</tree>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="expense_form_view">
+			<field name="name">expense.form</field>
+			<field name="model">immo.expense</field>
+			<field name="priority" eval="16" />
+			<field name="arch" type="xml">
+				<form string="expense Form">
+					<group col="4">
+						<field name="description" />
+						
+					</group>
+					<sheet>
+						<notebook>
+							<page string="Building">
+								<field name="building_id">									
+								</field>
+							</page>						
+						</notebook>
+					</sheet>
+				</form>
+			</field>
+		</record>
+	</data>
+</openerp>

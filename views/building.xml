@@ -53,6 +53,18 @@
 									</tree>
 								</field>
 							</page>
+							<page string="Contracts">
+								<field name="contract_ids">
+									<tree editable="false">
+									    <field name="description" />
+										<field name="date_start" />
+										<field name="date_end" />
+									<field name="partner_id" />
+									</tree>
+								</field>
+									
+									
+							</page>
 						</notebook>
 					</sheet>
 				</form>

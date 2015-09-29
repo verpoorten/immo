@@ -10,8 +10,20 @@
                 <notebook position="inside">
                     <page string="Building">
                         <group col="4">
-                            <field name="buildings_ids"/>
-                            
+                            <field name="buildings_ids"/>                            
+                        </group>
+                        
+                    </page>
+                    <page string="Contracts">
+                        <group col="4">
+                            <field name="contract_policy_holder_ids">
+                            <tree editable="false">
+									    <field name="description" />
+										<field name="date_start" />
+										<field name="date_end" />
+									
+									</tree>
+                            </field>                            
                         </group>
                         
                     </page>

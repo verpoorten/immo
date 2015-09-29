@@ -31,7 +31,9 @@
         'views/rental.xml',
         'views/following.xml',
         'views/revision.xml',
-        'views/partnerBuilding.xml'
+        'views/partnerBuilding.xml',
+        'views/contract.xml',
+        'views/expense.xml'
     ],
     # only loaded in demonstration mode
     'demo': [
