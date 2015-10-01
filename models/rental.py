@@ -24,8 +24,8 @@ class Rental(models.Model):
     revision_ids = fields.One2many('immo.revision', 'rental_id', string="Revision")
     indice_sante_initial = fields.Float()
     guarantor_ids = fields.Many2many('res.partner', relation='immo_guarantor_rental', column1='rental_id', column2='guarantor_id')
-    insurance_company_id = fields.Many2one('res.company',string ="Insurance company")
- 
+#     insurance_company_id = fields.Many2one('res.company',string ="Insurance company")
+
 
     
     @api.onchange('date_start')

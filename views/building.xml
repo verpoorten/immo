@@ -27,9 +27,25 @@
 						<field name="city" />
 						<field name="country" />
 						<field name="description" />
+						<field name="peb" />
+						<field name="square_measure" />
+						<field name="precompte_immobilier" />
+						
 					</group>
 					<sheet>
 						<notebook>
+						<page string="Loan">
+						<group col="4">
+							<field name="loan_bank" />
+							<field name="loan_total_amount" />
+							<field name="loan_buy_amount" />
+							<field name="loan_expenses_amount" />
+							<field name="loan_monthly_amount" />
+							<field name="load_start_date" />
+							<field name="load_end_date" />
+						</group>
+						
+						</page>
 							<page string="Owners">
 								<field name="owner_ids">
 									<tree editable="true">

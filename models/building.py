@@ -15,6 +15,19 @@ class Building(models.Model):
     city = fields.Char()
     country = fields.Char(default= "Belgium")
     
+    peb = fields.Char()
+    square_measure = fields.Float()
+    precompte_immobilier = fields.Float()
+    
+    loan_bank = fields.Char()
+    loan_total_amount = fields.Float()
+    loan_buy_amount = fields.Float()
+    loan_expenses_amount = fields.Float()
+    loan_monthly_amount = fields.Float()
+    load_start_date = fields.Date()
+    load_end_date = fields.Date()
+   
+    
     owner_ids = fields.Many2many('res.partner', relation='immo_owner_building', column1='building_id', column2='owner_id')    
     rental_ids = fields.One2many('immo.rental','building_id', string='Rentals')
     expense_ids = fields.One2many('immo.expense','building_id', string='Expenses')
