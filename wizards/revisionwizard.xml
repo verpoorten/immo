@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+		<record model="ir.ui.view" id="revisionwizard_form_view">
+			<field name="name">immo.wizard.revision.form</field>
+			<field name="model">immo.wizard.revision</field>
+			<field name="arch" type="xml">
+				<form string="New revision">
+					<group col="1">
+						<field name="rental_id" readonly="1" nolabel="1" />
+						<field name="rent" />
+						<field name="charges" />
+						<field name="date_start" />
+					</group>
+					<footer>
+						<button name="validate_revision" type="object" string="Validate"
+							class="oe_highlight" />
+						or
+						<button special="cancel" string="Cancel" />
+					</footer>
+				</form>
+			</field>
+		</record>
+	</data>
+</openerp>

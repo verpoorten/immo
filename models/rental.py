@@ -14,8 +14,8 @@ class Rental(models.Model):
     _inherits = [['immo.building','building_id'],]    
     _rec_name='date_start'
     
-    date_start = fields.Datetime(required=True)  
-    date_end = fields.Datetime(required=True)  
+    date_start = fields.Date(required=True)  
+    date_end = fields.Date(required=True)  
     rent = fields.Float(required=True, default=500)
     charges = fields.Float(required=True, default=0)
     note = fields.Char()    
@@ -48,52 +48,29 @@ class Rental(models.Model):
         date_fin = fields.Datetime.from_string(new_rev.date_end) 
         date_d = fields.Datetime.from_string(new_rev.date_start) 
         date_f = fields.Datetime.from_string(new_rev.date_start) + relativedelta(months=1)
-        while date_f <= date_fin:            
+        i=0
+        while date_f <= date_fin:
+            res_fol = self.env['immo.following']      
             fol=dict({})
             fol['revision_id'] = new_rev.id 
             fol['following_state'] = 'A_VERIFIER'
-            fol['date_start'] =fields.Datetime.to_string(date_d)
-            fol['date_end'] = fields.Datetime.to_string(date_f)
-            fol['rent_paid'] = -1
-            self.env['immo.following'].create(fol)
+#             fol['date_start'] =date_d
+#             fol['date_end'] = date_f
+            fol['payement_date'] =fields.Datetime.to_string(date_d)
+
+            fol['rent_paid'] = i
+            res_fol.create(fol)
             
             date_d = date_d + relativedelta(months=1)
             date_f = date_f + relativedelta(months=1)
-#         fol['bank_account'] = A_VERIFIER
-    
-#     date_start = fields.Datetime()
-#     date_end = fields.Datetime()
-#     payement_date = fields.Datetime() 
-        
-        
-        
-        
-#         fol=dict({})
-#         fol['revision_id'] = new_rev.id 
-#         fol['following_state'] = 'A_VERIFIER'
-#         fol['date_start'] = fields.Datetime.to_string(fields.Datetime.from_string(new_fol.date_start) + relativedelta(months=1))
-#         fol['date_end'] = fields.Datetime.to_string(fields.Datetime.from_string(new_fol.date_start) + relativedelta(months=2))
-#         fol['rent_paid'] = -1
-#         self.env['immo.following'].create(fol)
+            i=i+1
+
         return new_rental
 
     
     
     
-#     @api.one
-#     def create(self):
-#         
-#         return super(Rental, self).create(vals)
-#         default_revision=dict({})
-#         default_revision['rent'] = res.rent
-#         default_revision['charges'] = res.charges
-#         default_revision['rental_id'] = res.rental_id
-#         default_revision['date_start'] = res.date_start
-#         default_revision['date_end'] = res.date_end
-#         
-#         rev= super(Revision, self).create(default_revision)
-        
-#         return res  
+
     @api.constrains('date_start','date_end')
     def _check_date_start_end(self):
         for record in self:

@@ -28,6 +28,8 @@
 						<field name="charges" />
 						<field name="date_start" />
 						<field name="date_end" />
+						<button name="wizard_new_revision" type="object"
+    string="Nouvelle révision" />
 					</group>
 					<sheet>
 						<notebook>

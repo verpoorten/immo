@@ -33,7 +33,8 @@
         'views/revision.xml',
         'views/partnerBuilding.xml',
         'views/contract.xml',
-        'views/expense.xml'
+        'views/expense.xml',
+        'wizards/revisionwizard.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

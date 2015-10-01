@@ -53,6 +53,7 @@
 									</tree>
 								</field>
 							</page>
+				
 							<page string="Contracts">
 								<field name="contract_ids">
 									<tree editable="false">
@@ -64,6 +65,17 @@
 								</field>
 									
 									
+							</page>
+							<page string="Expenses">
+								<field name="expense_ids">
+									<tree editable="true">
+										<field name="description" />
+										<field name="date_end" />
+										<field name="date_start" />
+										<field name="cost" />
+										
+									</tree>
+								</field>
 							</page>
 						</notebook>
 					</sheet>

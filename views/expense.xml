@@ -7,9 +7,10 @@
 			<field name="priority" eval="8" />
 			<field name="arch" type="xml">
 				<tree string="expense">
-					<field name="street" />
-					<field name="city" />
-					<field name="description" />
+					<field name="building_id" string="building"/>
+					<field name="cost"/>
+					<field name="date_start"/>
+					<field name="date_end"/>					
 				</tree>
 			</field>
 		</record>
@@ -19,18 +20,18 @@
 			<field name="priority" eval="16" />
 			<field name="arch" type="xml">
 				<form string="expense Form">
-					<group col="4">
+				<group col="4">
+					<field name="building_id" string="Building"/>		
 						<field name="description" />
 						
 					</group>
-					<sheet>
-						<notebook>
-							<page string="Building">
-								<field name="building_id">									
-								</field>
-							</page>						
-						</notebook>
-					</sheet>
+					<group col="4">
+						
+						<field name="date_start" />
+						<field name="date_end" />
+						<field name="cost" />
+					</group>
+			
 				</form>
 			</field>
 		</record>

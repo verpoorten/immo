@@ -14,5 +14,5 @@ class Following(models.Model):
     bank_account = fields.Char()
 #     date_start = fields.Datetime()
 #     date_end = fields.Datetime()
-    payement_date = fields.Datetime()  
+    payement_date = fields.Date()  
 #     expected_payement_date = fields.Datetime()

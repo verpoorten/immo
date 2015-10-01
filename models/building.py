@@ -17,5 +17,5 @@ class Building(models.Model):
     
     owner_ids = fields.Many2many('res.partner', relation='immo_owner_building', column1='building_id', column2='owner_id')    
     rental_ids = fields.One2many('immo.rental','building_id', string='Rentals')
-#     expense_ids = fields.One2many('immo.expense','building_id', string='Expenses')
+    expense_ids = fields.One2many('immo.expense','building_id', string='Expenses')
     contract_ids = fields.One2many('immo.contract','building_id', string='Contracts')     
