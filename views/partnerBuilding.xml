@@ -28,6 +28,13 @@
                         </group>
                         
                     </page>
+                     <page string="Divers">
+                        <group col="4">
+                            <field name="guarantor_rental_ids"/>
+                                                  
+                        </group>
+                        
+                    </page>
                 </notebook>
             </field>
         </record>

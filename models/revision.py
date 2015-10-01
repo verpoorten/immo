@@ -15,7 +15,7 @@ class Revision(models.Model):
     date_end = fields.Date()
     rental_id = fields.Many2one('immo.rental', string='Rental',ondelete="restrict")
     following_ids = fields.One2many('immo.following','revision_id',string="Suivis")
-    
+    indice_sante = fields.Float()
     
     
     @api.multi

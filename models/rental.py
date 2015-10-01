@@ -14,6 +14,7 @@ class Rental(models.Model):
     _inherits = [['immo.building','building_id'],]    
     _rec_name='date_start'
     
+    contract_date = fields.Date()  
     date_start = fields.Date(required=True)  
     date_end = fields.Date(required=True)  
     rent = fields.Float(required=True, default=500)
@@ -21,6 +22,11 @@ class Rental(models.Model):
     note = fields.Char()    
     tenant_ids = fields.Many2many('res.partner', relation='immo_tenant_rental', column1='rental_id', column2='tenant_id')
     revision_ids = fields.One2many('immo.revision', 'rental_id', string="Revision")
+    indice_sante_initial = fields.Float()
+    guarantor_ids = fields.Many2many('res.partner', relation='immo_guarantor_rental', column1='rental_id', column2='guarantor_id')
+    insurance_company_id = fields.Many2one('res.company',string ="Insurance company")
+ 
+
     
     @api.onchange('date_start')
     def _verify_dates(self):
