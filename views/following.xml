@@ -27,7 +27,8 @@
 		<record model="ir.ui.view" id="following_form_view">
 			<field name="name">following.form</field>
 			<field name="model">immo.following</field>
-
+<!--      Pq fonctionne pas<field name="inherit_id" ref="immo.revision_form_view"/> -->
+<!--       Pq fonctionne pas <field name="inherit_id" ref="revision_form_view"/> -->
 			<field name="arch" type="xml">
 				<form string="following Form">
 					<group col="4">
@@ -35,14 +36,19 @@
 						<field name="payement_date" />
 						<field name="rent_paid" />
 						<field name="bank_account" />
-						<!-- <field name="expected_payement_date" /> -->
 					</group>
 					<sheet>
 						<notebook>
-
+						
 							<page string="Revision">
-								<field name="revision_id" />
+								<field name="revision_id">
+							
+								<field name="rent"/>
+								<field name="charges"/>
+							
+								</field>
 							</page>
+								
 						</notebook>
 					</sheet>
 				</form>

@@ -54,11 +54,8 @@ class Rental(models.Model):
             fol=dict({})
             fol['revision_id'] = new_rev.id 
             fol['following_state'] = 'A_VERIFIER'
-#             fol['date_start'] =date_d
-#             fol['date_end'] = date_f
             fol['payement_date'] =fields.Datetime.to_string(date_d)
-
-            fol['rent_paid'] = i
+            fol['rent_paid'] = -1
             res_fol.create(fol)
             
             date_d = date_d + relativedelta(months=1)

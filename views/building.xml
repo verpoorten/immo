@@ -10,6 +10,7 @@
 					<field name="street" />
 					<field name="city" />
 					<field name="description" />
+					<field name="owner_ids"/>
 				</tree>
 			</field>
 		</record>

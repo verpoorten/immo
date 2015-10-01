@@ -25,8 +25,7 @@
 			<field name="name">Revisions</field>
 			<field name="res_model">immo.revision</field>
 			<field name="view_type">form</field>
-			<field name="view_mode">tree,form,calendar</field>
-			
+			<field name="view_mode">tree,form,calendar</field>			
 		</record>
 		<record model="ir.actions.act_window" id="action_list_followings">
 			<field name="name">Followings</field>
@@ -45,7 +44,7 @@
 			<field name="name">Expenses</field>
 			<field name="res_model">immo.expense</field>
 			<field name="view_type">form</field>
-			<field name="view_mode">tree,form</field>			
+			<field name="view_mode">tree,form,calendar</field>			
 		</record>
 		<menuitem id="main_menu_immo" name="Menu immo" />
 		<menuitem id="menu_immo" name="Building menu" parent="main_menu_immo"/>
