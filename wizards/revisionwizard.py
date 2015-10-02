@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 from openerp import models, fields, api
+import datetime
+
 
 class RevisionWizard(models.TransientModel):
     _name = 'immo.wizard.revision'
@@ -28,5 +30,18 @@ class RevisionWizard(models.TransientModel):
             
         new_revision=res_revision.create({'rental_id':self.rental_id.id,'date_start':self.date_start,'date_end':self.date_end,'rent':self.rent,'charges':self.charges})
         rev.write({'date_end':self.date_start})
+        res_following = self.env['immo.following']
+#         existing_followings = res_following.search([('revision_id', '=', rev.id),('date_start','>=',fields.Datetime.from_string(rev['date_start']))]) tout avait changé
+        existing_followings = res_following.search([('revision_id', '=', rev.id),('date_start','>=',new_revision['date_start'])]) #rien ne change
+        
+        
+        for result in existing_followings:
+#             ds= fields.Datetime.from_string(result['date_start'])
+#             de= fields.Datetime.from_string(result['date_end'])
+#             
+#             if ds >= fields.Datetime.from_string(self.date_start):
+            fol=result
+            fol.write({'revision_id':new_revision.id, 'following_state':'REVISION_LOYER','rent_paid':-1})
+            
         return True
     
