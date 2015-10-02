@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+		<report id="report_session" 
+		        model="immo.rental" 
+		        string="Rental printing"
+			    name="immo.report_rental_view" 
+			    file="immo.report_rental" 
+			    report_type="qweb-html" />
+		<report id="report_session_pdf" 
+		        model="immo.rental" 
+		        string="Rental Report PDF"
+			    name="immo.report_rental_view" 
+			    file="immo.report_rental_pdf"
+			    report_type="qweb-pdf" />
+
+
+		<template id="report_rental_view">
+			<t t-call="report.html_container">
+				<t t-foreach="docs" t-as="doc">
+					<t t-call="report.external_layout">
+						<div class="page">
+							<!-- <t t-call="immo.report_partner_view"> -->
+							<h3>
+								CONTRAT DE BAIL DE COURTE DUREE POUR UN LOGEMENT
+								<br />
+								A USAGE DE RESIDENCE PRINCIPALE
+							</h3>
+							<P>
+								entre
+								ci-après dénommé "Bailleur",
+								et
+								<ul>
+									<t t-foreach="doc.tenant_ids" t-as="tenant">
+										<li>
+
+											<span t-field="tenant.name" />
+<!-- 											 né(e) à -->
+											 
+<!-- 											le <span t-field="birthdate" /> demeurant à  -->
+<!-- 											<span t-field="street" /> -->
+<!-- 											<span t-field="street2" />, <span t-field="zip" />  <span t-field="city" /> -->
+											
+											
+										</li>
+
+									</t>
+								</ul>
+								ci-après dénommé "Locataire",
+							</P>
+							<p>
+								1. Objet de la location<br/>
+								Le bailleur donne à bail au locataire qui l’affecte à sa résidence
+								principale
+								<span t-field="doc.building_id" />
+								Le bien loué sera affecté exclusivement à I’usage d’habitation
+								du locataire et de sa famille, à
+								I’exclusion de tout usage professionnel.
+								Les parties conviennent cependant que le locataire pourra affecter
+								une partie du bien loué à un
+								usage professionnel ne rendant pas applicable la législation relative
+								au bail commercial et que le
+								loyer se rapportant à I’usage professionnel du bien ne pourra
+								dépasser …………… /…………….. du loyer
+								en cours.
+							</p>
+							<p>
+								<h2>CONTRAT DE BAIL DE COURTE DUREE POUR IMMEUBLE A USAGE DE
+								RESIDENCE PRINCIPALE –2</h2>
+								<br/>
+								2. Durée
+								<br/>
+								Le bail est conclu pour une durée de ………………………………………. (au maximum
+								3 ans), prenant cours le
+								<span t-field="doc.date_start" />
+								pour se terminer le
+								<span t-field="doc.date_end" />
+								Le bail ne prendra fin que si l’une des parties donne congé par
+								lettre recommandée, au moins trois
+								mois avant l’échéance.
+
+
+							</p>
+
+						</div>
+					</t>
+				</t>
+			</t>
+		</template>
+
+
+		<!-- <template id="report_partner_view"> -->
+
+		<!-- <h2 t-field="doc.tenant_ids.name" /> -->
+
+
+
+		<!-- </template> -->
+
+	</data>
+</openerp>

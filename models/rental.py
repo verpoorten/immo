@@ -26,7 +26,7 @@ class Rental(models.Model):
     guarantor_ids = fields.Many2many('res.partner', relation='immo_guarantor_rental', column1='rental_id', column2='guarantor_id')
     owner_insurance_company_id = fields.Many2one('res.company',string ="Owner insurance company")
     tenants_insurance_company_id = fields.Many2one('res.company',string ="Tenants insurance company")    
-
+    attachments = fields.Many2many('ir.attachment', string="Attachments")
     
     @api.onchange('date_start')
     def _verify_dates(self):

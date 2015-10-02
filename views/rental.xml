@@ -75,6 +75,10 @@
 									<field name="tenants_insurance_company_id" string="Rental(s) insurance company" />
 								</group>
 							</page>
+							<page string="Attachments">
+    <field name="attachments" widget="many2many_binary"/>
+
+</page>
 						</notebook>
 					</sheet>
 				</form>
