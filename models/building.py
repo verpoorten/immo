@@ -19,7 +19,8 @@ class Building(models.Model):
     square_measure = fields.Float()
     precompte_immobilier = fields.Float()
     
-    loan_bank = fields.Char()
+    
+    building_loan_bank_id = fields.Many2one('res.company',string ="Loan bank company")
     loan_total_amount = fields.Float()
     loan_buy_amount = fields.Float()
     loan_expenses_amount = fields.Float()

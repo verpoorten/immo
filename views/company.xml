@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <openerp>
     <data>
-        <!-- Add instructor field to existing view -->
+        <!-- Add tenants, owners field to existing view -->
         <record model="ir.ui.view" id="company_building_form_view">
             <field name="name">company.immo</field>
             <field name="model">res.company</field>
@@ -17,6 +17,11 @@
                            
                             <field name="rental_tenants_insurance_ids"/>                            
                         </group>
+                        <group col="4">
+                           
+                            <field name="building_loan_bank_ids" string="Buildings"/>                            
+                        </group>
+                        
                     </page>
                    
                 </notebook>
