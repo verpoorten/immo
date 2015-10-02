@@ -2,8 +2,10 @@
 
 from openerp import models, fields, api
 
-class Company(models.Model):
+class Company(models.Model):    
     _inherit = 'res.company'
 
-#     rental_ids = fields.One2many('immo.rental','insurance_id', string='Insurance rental')
+    rental_owner_insurance_ids = fields.One2many('immo.rental','owner_insurance_company_id', string='Owner Insurance Company')
+    rental_tenants_insurance_ids = fields.One2many('immo.rental','tenants_insurance_company_id', string='Tenant Insurance compay')
+    
     

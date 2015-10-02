@@ -4,7 +4,6 @@ from openerp import models, fields, api
 
 class Partner(models.Model):
     _inherit = 'res.partner'
-
     
     prenom = fields.Char()  
     buildings_ids = fields.Many2many('immo.building', relation='immo_owner_building', column1='owner_id', column2='building_id')
@@ -16,7 +15,7 @@ class Partner(models.Model):
 #     guarantor_ids = fields.One2many('immo.rental','guarantor_id', string='Guarantor')
     
 #     contract_executor_holder_ids = fields.One2many('immo.contract', 'executor_id',string='contracts')
-
+    
     
     
    

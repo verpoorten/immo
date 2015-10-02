@@ -14,6 +14,12 @@
 			<field name="view_type">form</field>
 			<field name="view_mode">tree,form</field>
 		</record>
+		<record model="ir.actions.act_window" id="action_list_companies">
+			<field name="name">Companies</field>
+			<field name="res_model">res.company</field>			
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>		
 		<record model="ir.actions.act_window" id="action_list_rentals">
 			<field name="name">Rentals</field>
 			<field name="res_model">immo.rental</field>
@@ -50,6 +56,7 @@
 		<menuitem id="menu_immo" name="Building menu" parent="main_menu_immo"/>
 		<menuitem id="menu_building" parent="menu_immo" name="Buildings" action="action_list_buildings"/>
 		<menuitem id="menu_partner" parent="menu_immo" name="Partners" action="action_list_partners"/>
+		<menuitem id="menu_company" parent="menu_immo" name="Companies" action="action_list_companies"/>
 		<menuitem id="menu_rental" parent="menu_immo" name="Rentals" action="action_list_rentals"/>
 		
 		<menuitem id="menu_revision" parent="menu_immo" name="Revisions" action="action_list_revisions"/>

@@ -35,6 +35,7 @@
         'views/contract.xml',
         'views/expense.xml',
         'wizards/revisionwizard.xml',
+        'views/company.xml'
     ],
     # only loaded in demonstration mode
     'demo': [

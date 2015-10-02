@@ -64,8 +64,13 @@
 								</group>
 							</page>
 							<page string="Divers" >
-<group col="4">
+<group col="2">
 								<field name="guarantor_ids" string="Guarantors"/>
+								</group>
+								<group col="2">
+								
+								<field name="owner_insurance_company_id" string="Owner insurance company"/>
+								<field name="tenants_insurance_company_id" string="Rental(s) insurance company"/>
 </group>
 							</page>
 						</notebook>
