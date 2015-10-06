@@ -33,7 +33,7 @@ class Following(models.Model):
         for record in self:
             if record.following_state :
                 if record.following_state == 'PAYE' :
-                    if !record.payement_date :            
+                    if not record.payement_date :            
                         raise exceptions.ValidationError(_("Please encode a payement date"))
                            
 # ne Fonctionne pas

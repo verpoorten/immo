@@ -500,7 +500,7 @@ msgstr "Peb"
 #: view:immo.contract:immo.contract_form_view
 #: field:res.partner,contract_policy_holder_ids:0
 msgid "Policy holder"
-msgstr "Policy holder"
+msgstr "Demandeur"
 
 #. module: immo
 #: field:immo.building,precompte_immobilier:0
@@ -703,7 +703,7 @@ msgstr "or"
 #. module: immo
 #: field:immo.contract,policy_holder_id:0
 msgid "policy holder"
-msgstr "policy holder"
+msgstr "demandeur"
 
 #. module: immo
 #: view:website:immo.report_rental_view

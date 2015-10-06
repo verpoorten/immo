@@ -8,8 +8,11 @@
 			<field name="arch" type="xml">
 				<tree string="Contracts list">
 					<field name="description" />
+					<field name="contract_type" />
 					<field name="date_start" />
 					<field name="date_end" />
+					<field name="building_id" string="Building" />
+					
 				</tree>
 			</field>
 		</record>
@@ -21,6 +24,7 @@
 				<form string="contract Form">
 				<group col="4">
 						<field name="description" />
+						<field name="contract_type" />
 						<field name="date_start" />
 						<field name="date_end" />
 						<field name="building_id" string="Building"/>

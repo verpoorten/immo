@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from openerp import models, fields
+from openerp import models, fields, api
 
 class Building(models.Model):
     _name = 'immo.building'    
@@ -33,3 +33,12 @@ class Building(models.Model):
     rental_ids = fields.One2many('immo.rental','building_id', string='Rentals')
     expense_ids = fields.One2many('immo.expense','building_id', string='Expenses')
     contract_ids = fields.One2many('immo.contract','building_id', string='Contracts')     
+    
+    @api.multi
+    @api.depends('description', 'street')
+    def _name_get(self):
+        result = []
+        
+
+        result.append((self.description, '%s (%s)' % (self.street, ', '.self.number)))
+        return result

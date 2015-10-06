@@ -9,6 +9,7 @@
 				<tree string="building">
 					<field name="street" />
 					<field name="city" />
+					<field name="number" />
 					<field name="description" />
 					<field name="owner_ids"/>
 				</tree>
@@ -62,11 +63,7 @@
 										<field name="charges" />
 										<field name="note" />
 										<field name="tenant_ids" />
-<!-- 										<notebook> -->
-<!-- 										<page string="Locataires"> -->
-<!-- 										<field name="tenant_ids" /> -->
-<!-- 										</page> -->
-<!-- 										</notebook> -->
+									
 									</tree>
 								</field>
 							</page>
@@ -77,7 +74,10 @@
 									    <field name="description" />
 										<field name="date_start" />
 										<field name="date_end" />
-<!-- 									<field name="partner_id" /> -->
+										<field name="policy_holder_id" />
+										<field name="executor_id" />
+     
+
 									</tree>
 								</field>
 									
