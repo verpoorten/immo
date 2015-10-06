@@ -26,6 +26,10 @@ class Revision(models.Model):
             'rent' :self.rent,
             'charges' :  self.charges,                    
             'date_end': self.date_end,
+            'date_start_rental': self.rental_id.date_end,
+            'date_end_rental': self.rental_id.date_end,
+            'date_start_old_revision':self.date_start,
+            'date_end_old_revision':self.date_end,
         })
         return {
             'type': 'ir.actions.act_window',

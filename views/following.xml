@@ -8,18 +8,21 @@
 			<field name="priority" eval="8" />
 			<field name="arch" type="xml">
 				<tree string="following"
-					colors="green:following_state=='PAYE';red:following_state=='IMPAYE';orange:following_state=='A_VERIFIER'">
+					colors="green:following_state=='PAYE';red:following_state=='IMPAYE';orange:following_state=='A_VERIFIER';blue:following_state=='REVISION_LOYER'">
 					<field name="following_state" />
 
 					
-<!-- 					<field name="revision_id.rent" /> -->
+ 					<field name="revision_id" string="revision">
+ 					<field name="rent" />
+ 					<field name="charges" />
+ 					</field>
 					<!-- <field name="rent_expected" position="attributes"> -->
 					<!-- <attribute name="attrs">{'readonly':[('revision_id','=','False')]}</attribute> -->
 					<!-- </field> -->
 					<field name="rent_paid" />
 					<field name="bank_account" />
 					<field name="payement_date" />
-					<!-- <field name="expected_payement_date" /> -->
+					<field name="notes" /> 
 				</tree>
 			</field>
 		</record>

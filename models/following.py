@@ -16,6 +16,7 @@ class Following(models.Model):
 #     date_start = fields.Datetime()
 #     date_end = fields.Datetime()
     payement_date = fields.Date()  
+    notes = fields.Char()
 #     expected_payement_date = fields.Datetime()
     @api.model        
     def _needaction_domain_get(self):        

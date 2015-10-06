@@ -638,7 +638,7 @@ msgstr "Code postal"
 #: view:immo.expense:immo.immo_view_expense_tree
 #: model:ir.model,name:immo.model_immo_building
 msgid "building"
-msgstr "batiment"
+msgstr "Batiment"
 
 #. module: immo
 #: view:website:immo.report_rental_view

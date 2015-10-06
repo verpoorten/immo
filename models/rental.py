@@ -82,54 +82,5 @@ class Rental(models.Model):
                     if fields.Datetime.from_string(record.date_start) > fields.Datetime.from_string(record.date_end):
                         raise exceptions.ValidationError("La date de début est supérieure à la date de fin")
                     
-                    
-            
-      
-# @api.multi  
-# def copy(self, default=None):
-#     default=dict(default or {})
-#     default['remarque']= "kkk"
-# 
-#     return super(Location,self).copy(default)
-#      
-#      
-     
-#     _sql_constraints = [
-#                         ('remarque_unique',
-#                         'UNIQUE(remarque)',"Il ne peut y avoir 2 fois la même remarque"),
-#                         ]
-#      
-       
-# def name_get(self,cr,uid,ids,context=None):
-#     if not len(ids):
-#         return []
-#     res = [(r['id'],r['name'] and '%s [%s]' % (r['date_start'],r['date_end']) or r['name']) for r in self.read(cr,uid,ids,['date_start','date_end'],context= context)]
-#     return res
-# @api.multi  
-# def create(self,default=None):
-#     default=dict(default or {})
-#     default_revision=dict(default or {})
-#     default_revision['loyer']=self.loyer_initial
-#     default_revision['location_id']=self.location_id
-#     default['remarque']='test'
-# #     Revision.create(default_revision)
-#     super(Revision,self).create(default_revision)
-#     return super(Location,self).create(default)
-# 
-# def create(self, cr, uid, vals, context=None):
-#     default_revision=dict( {})
-#     default_revision['loyer']=self.loyer_initial
-#     default_revision['location_id']=self.location_id
-#     att_id = self.pool.get('revision').create(cr,uid,{'loyer':500},context=context)
-#     vals['remarque']='test'
-#     res=super(location,self).create(cr,uid,vals,context=context)
-#     return res
 
-# @api.multi  
-# def create(self, default=None):
-#     default=dict(default or {})
-# 
-#     default['remarque']='test'
-# 
-#     return super(Location,self).create(default)
 

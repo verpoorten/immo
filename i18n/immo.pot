@@ -479,7 +479,7 @@ msgstr "Partner"
 #: model:ir.actions.act_window,name:immo.action_list_partners
 #: model:ir.ui.menu,name:immo.menu_partner
 msgid "Partners"
-msgstr "Partners"
+msgstr "Contacts"
 
 #. module: immo
 #: field:immo.following,payement_date:0

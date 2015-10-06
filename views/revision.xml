@@ -9,6 +9,7 @@
 			<field name="priority" eval="8" />
 			<field name="arch" type="xml">
 				<tree string="revision">
+				<field name="rental_id" string="Rental" />
 					<field name="date_start" />
 					<field name="date_end" />
 					<field name="rent" />
