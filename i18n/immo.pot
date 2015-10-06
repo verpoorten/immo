@@ -1,0 +1,743 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* immo
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-10-06 08:32+0000\n"
+"PO-Revision-Date: 2015-10-06 08:32+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: immo
+#: view:website:immo.report_rental_view
+msgid "1. Objet de la location"
+msgstr "1. Objet de la location"
+
+#. module: immo
+#: view:website:immo.report_rental_view
+msgid "2. Durée"
+msgstr "2. Durée"
+
+#. module: immo
+#: view:website:immo.report_rental_view
+msgid "A USAGE DE RESIDENCE PRINCIPALE"
+msgstr "A USAGE DE RESIDENCE PRINCIPALE"
+
+#. module: immo
+#: selection:immo.following,following_state:0
+msgid "A vérifier"
+msgstr "A vérifier"
+
+#. module: immo
+#: field:res.partner,activityinfo_ids:0
+msgid "Activityinfo ids"
+msgstr "Activityinfo ids"
+
+#. module: immo
+#: view:immo.rental:immo.rental_form_view
+#: field:immo.rental,attachments:0
+msgid "Attachments"
+msgstr "Attachments"
+
+#. module: immo
+#: field:immo.contract,building_id:0
+#: field:immo.expense,building_id:0
+#: field:immo.rental,building_id:0
+msgid "Automatically created field to link to parent immo.building"
+msgstr "Automatically created field to link to parent immo.building"
+
+#. module: immo
+#: field:immo.following,revision_id:0
+msgid "Automatically created field to link to parent immo.revision"
+msgstr "Automatically created field to link to parent immo.revision"
+
+#. module: immo
+#: field:immo.following,bank_account:0
+msgid "Bank account"
+msgstr "Bank account"
+
+#. module: immo
+#: view:immo.contract:immo.contract_form_view
+#: view:immo.expense:immo.expense_form_view
+#: view:immo.rental:immo.immo_view_rental_tree
+#: view:immo.rental:immo.rental_form_view
+#: view:res.partner:immo.partner_building_form_view
+msgid "Building"
+msgstr "Building"
+
+#. module: immo
+#: view:immo.building:immo.building_form_view
+msgid "Building Form"
+msgstr "Building Form"
+
+#. module: immo
+#: model:ir.ui.menu,name:immo.menu_immo
+msgid "Building menu"
+msgstr "Building menu"
+
+#. module: immo
+#: model:ir.actions.act_window,name:immo.action_list_buildings
+#: model:ir.ui.menu,name:immo.menu_building
+#: view:res.company:immo.company_building_form_view
+msgid "Buildings"
+msgstr "Buildings"
+
+#. module: immo
+#: field:res.partner,buildings_ids:0
+msgid "Buildings ids"
+msgstr "Buildings ids"
+
+#. module: immo
+#: view:website:immo.report_rental_view
+msgid "CONTRAT DE BAIL DE COURTE DUREE POUR IMMEUBLE A USAGE DE\n"
+"								RESIDENCE PRINCIPALE –2"
+msgstr "CONTRAT DE BAIL DE COURTE DUREE POUR IMMEUBLE A USAGE DE\n"
+"								RESIDENCE PRINCIPALE –2"
+
+#. module: immo
+#: view:website:immo.report_rental_view
+msgid "CONTRAT DE BAIL DE COURTE DUREE POUR UN LOGEMENT"
+msgstr "CONTRAT DE BAIL DE COURTE DUREE POUR UN LOGEMENT"
+
+#. module: immo
+#: view:immo.wizard.revision:immo.revisionwizard_form_view
+msgid "Cancel"
+msgstr "Cancel"
+
+#. module: immo
+#: field:immo.rental,charges:0
+#: field:immo.revision,charges:0
+#: field:immo.wizard.revision,charges:0
+msgid "Charges"
+msgstr "Charges"
+
+#. module: immo
+#: field:immo.building,city:0
+msgid "City"
+msgstr "City"
+
+#. module: immo
+#: model:ir.actions.act_window,name:immo.action_list_companies
+#: model:ir.model,name:immo.model_immo_company
+#: model:ir.model,name:immo.model_res_company
+#: model:ir.ui.menu,name:immo.menu_company
+msgid "Companies"
+msgstr "Companies"
+
+#. module: immo
+#: field:immo.rental,contract_date:0
+msgid "Contract date"
+msgstr "Contract date"
+
+#. module: immo
+#: view:immo.building:immo.building_form_view
+#: field:immo.building,contract_ids:0
+#: model:ir.actions.act_window,name:immo.action_list_contracts
+#: model:ir.ui.menu,name:immo.menu_contract
+#: view:res.partner:immo.partner_building_form_view
+msgid "Contracts"
+msgstr "Contracts"
+
+#. module: immo
+#: view:immo.contract:immo.immo_view_contract_tree
+msgid "Contracts list"
+msgstr "Contracts list"
+
+#. module: immo
+#: field:immo.expense,cost:0
+msgid "Cost"
+msgstr "Cost"
+
+#. module: immo
+#: field:immo.building,country:0
+msgid "Country"
+msgstr "Country"
+
+#. module: immo
+#: field:immo.building,create_uid:0
+#: field:immo.contract,create_uid:0
+#: field:immo.expense,create_uid:0
+#: field:immo.following,create_uid:0
+#: field:immo.rental,create_uid:0
+#: field:immo.revision,create_uid:0
+#: field:immo.wizard.revision,create_uid:0
+msgid "Created by"
+msgstr "Created by"
+
+#. module: immo
+#: field:immo.building,create_date:0
+#: field:immo.contract,create_date:0
+#: field:immo.expense,create_date:0
+#: field:immo.following,create_date:0
+#: field:immo.rental,create_date:0
+#: field:immo.revision,create_date:0
+#: field:immo.wizard.revision,create_date:0
+msgid "Created on"
+msgstr "Created on"
+
+#. module: immo
+#: field:immo.contract,date_end:0
+#: field:immo.expense,date_end:0
+#: field:immo.rental,date_end:0
+#: field:immo.revision,date_end:0
+#: field:immo.wizard.revision,date_end:0
+msgid "Date end"
+msgstr "Date end"
+
+#. module: immo
+#: field:immo.contract,date_start:0
+#: field:immo.expense,date_start:0
+#: field:immo.rental,date_start:0
+#: field:immo.revision,date_start:0
+#: field:immo.wizard.revision,date_start:0
+msgid "Date start"
+msgstr "Date start"
+
+#. module: immo
+#: field:immo.building,description:0
+#: field:immo.contract,description:0
+#: field:immo.expense,description:0
+msgid "Description"
+msgstr "Description"
+
+#. module: immo
+#: view:immo.rental:immo.rental_form_view
+#: view:res.company:immo.company_building_form_view
+#: view:res.partner:immo.partner_building_form_view
+msgid "Divers"
+msgstr "Divers"
+
+#. module: immo
+#: selection:immo.expense,expense_state:0
+msgid "En cours"
+msgstr "En cours"
+
+#. module: immo
+#: view:immo.contract:immo.contract_form_view
+#: field:res.partner,contract_executor_ids:0
+msgid "Executor"
+msgstr "Executor"
+
+#. module: immo
+#: view:immo.expense:immo.expense_calendar_view
+msgid "Expense calendrier"
+msgstr "Expense calendrier"
+
+#. module: immo
+#: field:immo.expense,expense_state:0
+msgid "Expense state"
+msgstr "Expense state"
+
+#. module: immo
+#: view:immo.building:immo.building_form_view
+#: field:immo.building,expense_ids:0
+#: model:ir.actions.act_window,name:immo.action_list_expenses
+#: model:ir.ui.menu,name:immo.menu_expense
+msgid "Expenses"
+msgstr "Expenses"
+
+#. module: immo
+#: selection:immo.expense,expense_state:0
+msgid "Fait"
+msgstr "Fait"
+
+#. module: immo
+#: field:immo.following,following_state:0
+msgid "Following state"
+msgstr "Following state"
+
+#. module: immo
+#: model:ir.actions.act_window,name:immo.action_list_followings
+#: model:ir.ui.menu,name:immo.menu_following
+msgid "Followings"
+msgstr "Followings"
+
+#. module: immo
+#: field:immo.rental,guarantor_ids:0
+msgid "Guarantor ids"
+msgstr "Guarantor ids"
+
+#. module: immo
+#: field:res.partner,guarantor_rental_ids:0
+msgid "Guarantor rental ids"
+msgstr "Guarantor rental ids"
+
+#. module: immo
+#: view:immo.rental:immo.rental_form_view
+msgid "Guarantors"
+msgstr "Guarantors"
+
+#. module: immo
+#: field:immo.building,id:0
+#: field:immo.contract,id:0
+#: field:immo.expense,id:0
+#: field:immo.following,id:0
+#: field:immo.rental,id:0
+#: field:immo.revision,id:0
+#: field:immo.wizard.revision,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: immo
+#: selection:immo.following,following_state:0
+msgid "Impayé"
+msgstr "Impayé"
+
+#. module: immo
+#: field:immo.revision,indice_sante:0
+msgid "Indice sante"
+msgstr "Indice sante"
+
+#. module: immo
+#: field:immo.rental,indice_sante_initial:0
+msgid "Indice sante initial"
+msgstr "Indice sante initial"
+
+#. module: immo
+#: field:immo.building,write_uid:0
+#: field:immo.contract,write_uid:0
+#: field:immo.expense,write_uid:0
+#: field:immo.following,write_uid:0
+#: field:immo.rental,write_uid:0
+#: field:immo.revision,write_uid:0
+#: field:immo.wizard.revision,write_uid:0
+msgid "Last Updated by"
+msgstr "Last Updated by"
+
+#. module: immo
+#: field:immo.building,write_date:0
+#: field:immo.contract,write_date:0
+#: field:immo.expense,write_date:0
+#: field:immo.following,write_date:0
+#: field:immo.rental,write_date:0
+#: field:immo.revision,write_date:0
+#: field:immo.wizard.revision,write_date:0
+msgid "Last Updated on"
+msgstr "Last Updated on"
+
+#. module: immo
+#: view:website:immo.report_rental_view
+msgid "Le bail est conclu pour une durée de ………………………………………. (au maximum\n"
+"								3 ans), prenant cours le"
+msgstr "Le bail est conclu pour une durée de ………………………………………. (au maximum\n"
+"								3 ans), prenant cours le"
+
+#. module: immo
+#: view:website:immo.report_rental_view
+msgid "Le bail ne prendra fin que si l’une des parties donne congé par\n"
+"								lettre recommandée, au moins trois\n"
+"								mois avant l’échéance."
+msgstr "Le bail ne prendra fin que si l’une des parties donne congé par\n"
+"								lettre recommandée, au moins trois\n"
+"								mois avant l’échéance."
+
+#. module: immo
+#: view:website:immo.report_rental_view
+msgid "Le bailleur donne à bail au locataire qui l’affecte à sa résidence\n"
+"								principale"
+msgstr "Le bailleur donne à bail au locataire qui l’affecte à sa résidence\n"
+"								principale"
+
+#. module: immo
+#: view:website:immo.report_rental_view
+msgid "Le bien loué sera affecté exclusivement à I’usage d’habitation\n"
+"								du locataire et de sa famille, à\n"
+"								I’exclusion de tout usage professionnel.\n"
+"								Les parties conviennent cependant que le locataire pourra affecter\n"
+"								une partie du bien loué à un\n"
+"								usage professionnel ne rendant pas applicable la législation relative\n"
+"								au bail commercial et que le\n"
+"								loyer se rapportant à I’usage professionnel du bien ne pourra\n"
+"								dépasser …………… /…………….. du loyer\n"
+"								en cours."
+msgstr "Le bien loué sera affecté exclusivement à I’usage d’habitation\n"
+"								du locataire et de sa famille, à\n"
+"								I’exclusion de tout usage professionnel.\n"
+"								Les parties conviennent cependant que le locataire pourra affecter\n"
+"								une partie du bien loué à un\n"
+"								usage professionnel ne rendant pas applicable la législation relative\n"
+"								au bail commercial et que le\n"
+"								loyer se rapportant à I’usage professionnel du bien ne pourra\n"
+"								dépasser …………… /…………….. du loyer\n"
+"								en cours."
+
+#. module: immo
+#: field:immo.building,load_end_date:0
+msgid "Load end date"
+msgstr "Load end date"
+
+#. module: immo
+#: field:immo.building,load_start_date:0
+msgid "Load start date"
+msgstr "Load start date"
+
+#. module: immo
+#: view:immo.building:immo.building_form_view
+msgid "Loan"
+msgstr "Loan"
+
+#. module: immo
+#: field:immo.building,building_loan_bank_id:0
+#: field:res.company,building_loan_bank_ids:0
+msgid "Loan bank company"
+msgstr "Loan bank company"
+
+#. module: immo
+#: field:immo.building,loan_buy_amount:0
+msgid "Loan buy amount"
+msgstr "Loan buy amount"
+
+#. module: immo
+#: field:immo.building,loan_expenses_amount:0
+msgid "Loan expenses amount"
+msgstr "Loan expenses amount"
+
+#. module: immo
+#: field:immo.building,loan_monthly_amount:0
+msgid "Loan monthly amount"
+msgstr "Loan monthly amount"
+
+#. module: immo
+#: field:immo.building,loan_total_amount:0
+msgid "Loan total amount"
+msgstr "Loan total amount"
+
+#. module: immo
+#: model:ir.ui.menu,name:immo.main_menu_immo
+msgid "Menu immo"
+msgstr "Menu immo"
+
+#. module: immo
+#: field:immo.wizard.revision,new_date:0
+msgid "New date"
+msgstr "New date"
+
+#. module: immo
+#: view:immo.wizard.revision:immo.revisionwizard_form_view
+msgid "New revision"
+msgstr "New revision"
+
+#. module: immo
+#: field:immo.rental,note:0
+msgid "Note"
+msgstr "Note"
+
+#. module: immo
+#: view:immo.revision:immo.revision_form_view
+msgid "Nouvelle révision"
+msgstr "Nouvelle révision"
+
+#. module: immo
+#: field:immo.building,number:0
+msgid "Number"
+msgstr "Number"
+
+#. module: immo
+#: field:res.company,rental_owner_insurance_ids:0
+msgid "Owner Insurance Company"
+msgstr "Owner Insurance Company"
+
+#. module: immo
+#: field:immo.building,owner_ids:0
+msgid "Owner ids"
+msgstr "Owner ids"
+
+#. module: immo
+#: view:immo.rental:immo.rental_form_view
+#: field:immo.rental,owner_insurance_company_id:0
+msgid "Owner insurance company"
+msgstr "Owner insurance company"
+
+#. module: immo
+#: view:immo.building:immo.building_form_view
+msgid "Owners"
+msgstr "Owners"
+
+#. module: immo
+#: selection:immo.following,following_state:0
+msgid "Paiement incomplet"
+msgstr "Paiement incomplet"
+
+#. module: immo
+#: selection:immo.following,following_state:0
+msgid "Paiement supérieur"
+msgstr "Paiement supérieur"
+
+#. module: immo
+#: model:ir.model,name:immo.model_res_partner
+msgid "Partner"
+msgstr "Partner"
+
+#. module: immo
+#: model:ir.actions.act_window,name:immo.action_list_partners
+#: model:ir.ui.menu,name:immo.menu_partner
+msgid "Partners"
+msgstr "Partners"
+
+#. module: immo
+#: field:immo.following,payement_date:0
+msgid "Payement date"
+msgstr "Payement date"
+
+#. module: immo
+#: selection:immo.following,following_state:0
+msgid "Payé"
+msgstr "Payé"
+
+#. module: immo
+#: field:immo.building,peb:0
+msgid "Peb"
+msgstr "Peb"
+
+#. module: immo
+#: view:immo.contract:immo.contract_form_view
+#: field:res.partner,contract_policy_holder_ids:0
+msgid "Policy holder"
+msgstr "Policy holder"
+
+#. module: immo
+#: field:immo.building,precompte_immobilier:0
+msgid "Precompte immobilier"
+msgstr "Precompte immobilier"
+
+#. module: immo
+#: selection:immo.expense,expense_state:0
+msgid "Refusé"
+msgstr "Refusé"
+
+#. module: immo
+#: field:immo.rental,rent:0
+#: field:immo.revision,rent:0
+#: field:immo.wizard.revision,rent:0
+msgid "Rent"
+msgstr "Rent"
+
+#. module: immo
+#: field:immo.following,rent_paid:0
+msgid "Rent paid"
+msgstr "Rent paid"
+
+#. module: immo
+#: view:immo.revision:immo.revision_form_view
+#: field:immo.revision,rental_id:0
+#: field:immo.wizard.revision,rental_id:0
+msgid "Rental"
+msgstr "Rental"
+
+#. module: immo
+#: model:ir.actions.report.xml,name:immo.report_session_pdf
+msgid "Rental Report PDF"
+msgstr "Rental Report PDF"
+
+#. module: immo
+#: field:res.partner,rental_ids:0
+msgid "Rental ids"
+msgstr "Rental ids"
+
+#. module: immo
+#: model:ir.actions.report.xml,name:immo.report_session
+msgid "Rental printing"
+msgstr "Rental printing"
+
+#. module: immo
+#: view:immo.rental:immo.rental_form_view
+msgid "Rental(s) insurance company"
+msgstr "Rental(s) insurance company"
+
+#. module: immo
+#: view:immo.building:immo.building_form_view
+#: field:immo.building,rental_ids:0
+#: model:ir.actions.act_window,name:immo.action_list_rentals
+#: model:ir.ui.menu,name:immo.menu_rental
+msgid "Rentals"
+msgstr "Rentals"
+
+#. module: immo
+#: view:immo.following:immo.following_form_view
+#: field:immo.rental,revision_ids:0
+#: field:immo.wizard.revision,revision_id:0
+msgid "Revision"
+msgstr "Revision"
+
+#. module: immo
+#: view:immo.rental:immo.rental_form_view
+#: model:ir.actions.act_window,name:immo.action_list_revisions
+#: model:ir.ui.menu,name:immo.menu_revision
+msgid "Revisions"
+msgstr "Revisions"
+
+#. module: immo
+#: selection:immo.following,following_state:0
+msgid "Révision loyer"
+msgstr "Révision loyer"
+
+#. module: immo
+#: selection:immo.expense,expense_state:0
+msgid "Souhait"
+msgstr "Souhait"
+
+#. module: immo
+#: field:immo.building,square_measure:0
+msgid "Square measure"
+msgstr "Square measure"
+
+#. module: immo
+#: field:immo.building,street:0
+msgid "Street"
+msgstr "Street"
+
+#. module: immo
+#: field:res.partner,student:0
+msgid "Student"
+msgstr "Student"
+
+#. module: immo
+#: field:immo.revision,following_ids:0
+msgid "Suivis"
+msgstr "Suivis"
+
+#. module: immo
+#: field:res.company,rental_tenants_insurance_ids:0
+msgid "Tenant Insurance compay"
+msgstr "Tenant Insurance compay"
+
+#. module: immo
+#: field:immo.rental,tenant_ids:0
+msgid "Tenant ids"
+msgstr "Tenant ids"
+
+#. module: immo
+#: view:immo.rental:immo.rental_form_view
+msgid "Tenants"
+msgstr "Tenants"
+
+#. module: immo
+#: field:immo.rental,tenants_insurance_company_id:0
+msgid "Tenants insurance company"
+msgstr "Tenants insurance company"
+
+#. module: immo
+#: view:immo.wizard.revision:immo.revisionwizard_form_view
+msgid "Validate"
+msgstr "Validate"
+
+#. module: immo
+#: field:immo.building,zip_code:0
+msgid "Zip code"
+msgstr "Zip code"
+
+#. module: immo
+#: view:immo.building:immo.immo_view_building_tree
+#: view:immo.expense:immo.immo_view_expense_tree
+#: model:ir.model,name:immo.model_immo_building
+msgid "building"
+msgstr "building"
+
+#. module: immo
+#: view:website:immo.report_rental_view
+msgid "ci-après dénommé \"Locataire\","
+msgstr "ci-après dénommé \"Locataire\","
+
+#. module: immo
+#: view:immo.contract:immo.contract_form_view
+msgid "contract Form"
+msgstr "contract Form"
+
+#. module: immo
+#: view:website:immo.report_rental_view
+msgid "entre\n"
+"								ci-après dénommé \"Bailleur\",\n"
+"								et"
+msgstr "entre\n"
+"								ci-après dénommé \"Bailleur\",\n"
+"								et"
+
+#. module: immo
+#: field:immo.contract,executor_id:0
+msgid "executor"
+msgstr "executor"
+
+#. module: immo
+#: view:immo.expense:immo.immo_view_expense_tree
+msgid "expense"
+msgstr "expense"
+
+#. module: immo
+#: view:immo.expense:immo.expense_form_view
+msgid "expense Form"
+msgstr "expense Form"
+
+#. module: immo
+#: view:immo.following:immo.immo_view_following_tree
+#: model:ir.model,name:immo.model_immo_following
+msgid "following"
+msgstr "following"
+
+#. module: immo
+#: view:immo.following:immo.following_form_view
+msgid "following Form"
+msgstr "following Form"
+
+#. module: immo
+#: view:immo.following:immo.following_calendar_view
+msgid "following calendrier"
+msgstr "following calendrier"
+
+#. module: immo
+#: model:ir.model,name:immo.model_immo_location
+msgid "location"
+msgstr "location"
+
+#. module: immo
+#: view:immo.wizard.revision:immo.revisionwizard_form_view
+msgid "or"
+msgstr "or"
+
+#. module: immo
+#: field:immo.contract,policy_holder_id:0
+msgid "policy holder"
+msgstr "policy holder"
+
+#. module: immo
+#: view:website:immo.report_rental_view
+msgid "pour se terminer le"
+msgstr "pour se terminer le"
+
+#. module: immo
+#: view:immo.rental:immo.immo_view_rental_tree
+msgid "rent"
+msgstr "rent"
+
+#. module: immo
+#: model:ir.model,name:immo.model_immo_rental
+msgid "rental"
+msgstr "rental"
+
+#. module: immo
+#: view:immo.rental:immo.rental_form_view
+msgid "rental Form"
+msgstr "rental Form"
+
+#. module: immo
+#: view:immo.revision:immo.immo_view_revision_tree
+#: model:ir.model,name:immo.model_immo_revision
+msgid "revision"
+msgstr "revision"
+
+#. module: immo
+#: view:immo.revision:immo.revision_form_view
+msgid "revision Form"
+msgstr "revision Form"
+
+#. module: immo
+#: model:ir.model,name:immo.model_immo_suivi
+msgid "suivi"
+msgstr "suivi"
+
