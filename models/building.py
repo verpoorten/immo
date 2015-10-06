@@ -6,7 +6,7 @@ class Building(models.Model):
     _name = 'immo.building'    
     _description = "building"
     _rec_name='description'
-    
+    _order = 'city'
        
     description = fields.Char()   
     street = fields.Char()

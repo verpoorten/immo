@@ -36,7 +36,7 @@ class RevisionWizard(models.TransientModel):
         existing_followings = res_following.search([('revision_id', '=', id_old_revision)]) 
        
         for result in existing_followings:
-            ds= fields.Datetime.from_string(result['payement_date'])
+            ds= fields.Datetime.from_string(result['expected_payement_date'])
             if ds >= fields.Datetime.from_string(new_revision['date_start']):
   
                 result.write ({'following_state':'REVISION_LOYER','revision_id':new_revision.id})

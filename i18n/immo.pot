@@ -534,7 +534,7 @@ msgstr "Rental"
 #. module: immo
 #: model:ir.actions.report.xml,name:immo.report_session_pdf
 msgid "Rental Report PDF"
-msgstr "Rental Report PDF"
+msgstr "Bail location PDF"
 
 #. module: immo
 #: field:res.partner,rental_ids:0

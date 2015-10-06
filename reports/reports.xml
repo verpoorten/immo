@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <openerp>
 	<data>
-		<report id="report_session" 
-		        model="immo.rental" 
-		        string="Rental printing"
-			    name="immo.report_rental_view" 
-			    file="immo.report_rental" 
-			    report_type="qweb-html" />
+<!-- 		<report id="report_session"  -->
+<!-- 		        model="immo.rental"  -->
+<!-- 		        string="Rental printing" -->
+<!-- 			    name="immo.report_rental_view"  -->
+<!-- 			    file="immo.report_rental"  -->
+<!-- 			    report_type="qweb-html" /> -->
 		<report id="report_session_pdf" 
 		        model="immo.rental" 
 		        string="Rental Report PDF"
