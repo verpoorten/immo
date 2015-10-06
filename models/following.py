@@ -25,8 +25,19 @@ class Following(models.Model):
 #     expected_payement_date = fields.Datetime()
 
     @api.model        
-    def _needaction_domain_get(self):   
+    def _needaction_domain_get(self): 
+#         Pourquoi ceci ne fonctionne pas???  
+        #         d_plus_7   = date.today()+ relativedelta(days=7)
+#         return [ ('following_state', '!=', 'PAYE'),('expected_payement_date','<',fields.Datetime.to_string(d_plus_7))]  
         return [ ('following_state', '!=', 'PAYE')]
+        
+#         return [ ('following_state', '!=', 'PAYE'),('expected_payement_date','<',(date.today() + datetime.timedelta(7)).strftime('%%Y-%%m-%%d') )]
+#         return [('expected_payement_date','<',((date.today()-datetime.timedelta(days=10)).strftime('%Y-%m-%d')))]
+# ne Fonctionne pas
+#         d_moins_7 = date.today()- relativedelta(days=7)
+
+
+#              
     
     @api.constrains('following_state','payement_date')
     def _check_date__end(self):
@@ -36,7 +47,3 @@ class Following(models.Model):
                     if not record.payement_date :            
                         raise exceptions.ValidationError(_("Please encode a payement date"))
                            
-# ne Fonctionne pas
-#         d_moins_7 = date.today()- relativedelta(days=7)
-#         d_plus_7   = date.today()+ relativedelta(days=7)
-#         return [ ('following_state', '!=', 'PAYE'),('expected_payement_date','<',fields.Datetime.to_string(d_plus_7))]   
