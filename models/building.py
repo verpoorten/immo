@@ -25,9 +25,9 @@ class Building(models.Model):
     loan_buy_amount = fields.Float()
     loan_expenses_amount = fields.Float()
     loan_monthly_amount = fields.Float()
-    load_start_date = fields.Date()
-    load_end_date = fields.Date()
-   
+    loan_start_date = fields.Date()
+    loan_end_date = fields.Date()
+    picture = fields.Binary('Picture', filters='*.png,*.gif,*.jpg,*.jpge')
     
     owner_ids = fields.Many2many('res.partner', relation='immo_owner_building', column1='building_id', column2='owner_id')    
     rental_ids = fields.One2many('immo.rental','building_id', string='Rentals')

@@ -21,19 +21,21 @@
 		</record>
 		<!-- Form -->
 		<record model="ir.ui.view" id="revision_form_view">
+		
 			<field name="name">revision.form</field>
 			<field name="model">immo.revision</field>
 
 			<field name="arch" type="xml">
 				<form string="revision Form">
+				<header>	<button name="wizard_new_revision" type="object"
+    string="Nouvelle révision" /></header>
 					<group col="4">
 						<field name="rent" />
 						<field name="indice_sante" />
 						<field name="charges" />
 						<field name="date_start" />
 						<field name="date_end" />
-						<button name="wizard_new_revision" type="object"
-    string="Nouvelle révision" />
+					
 					</group>
 					<sheet>
 						<notebook>

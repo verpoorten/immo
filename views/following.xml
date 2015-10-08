@@ -42,17 +42,15 @@
 						<field name="expected_payement_date" readonly="1"/>
 						<field name="payement_date" />
 						<field name="rent_paid" />
-						<field name="bank_account" />
+<!-- 						<field name="bank_account" /> -->
 					</group>
 					<sheet>
 						<notebook>
 						
 							<page string="Revision">
-								<field name="revision_id">
-							
+								<field name="revision_id">							
 								<field name="rent"/>
-								<field name="charges"/>
-							
+								<field name="charges"/>							
 								</field>
 							</page>
 								
