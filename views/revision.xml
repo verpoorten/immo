@@ -41,7 +41,6 @@
 							<page string="Rental" name="rental">
 								<field name="rental_id"/>
 									
-										<field name="note" />
 										
 									
 

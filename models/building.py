@@ -34,11 +34,9 @@ class Building(models.Model):
     expense_ids = fields.One2many('immo.expense','building_id', string='Expenses')
     contract_ids = fields.One2many('immo.contract','building_id', string='Contracts')     
     
-    @api.multi
-    @api.depends('description', 'street')
-    def _name_get(self):
-        result = []
-        
-
-        result.append((self.description, '%s (%s)' % (self.street, ', '.self.number)))
-        return result
+    def name_get(self,cr,uid,ids,context=None):
+        result = {}
+        for record in self.browse(cr,uid,ids,context=context):
+            result[record.id] = record.description + " - " + record.city
+    
+        return result.items()

@@ -9,7 +9,6 @@ import datetime
 class Following(models.Model):
     _name = 'immo.following'
     _description = "following"
-#     _inherits = [['immo.revision','revision_id'],['immo.revision','charges']]
     _inherits = [['immo.revision','revision_id'],]
     _inherit = 'ir.needaction_mixin'
     _order = 'expected_payement_date'
@@ -27,10 +26,11 @@ class Following(models.Model):
 
     @api.model        
     def _needaction_domain_get(self): 
+        d = date.today() + relativedelta(days=7)
 #         Pourquoi ceci ne fonctionne pas???  
         #         d_plus_7   = date.today()+ relativedelta(days=7)
 #         return [ ('following_state', '!=', 'PAYE'),('expected_payement_date','<',fields.Datetime.to_string(d_plus_7))]  
-        return [ ('following_state', '!=', 'PAYE')]
+        return [ ('following_state', '!=', 'PAYE'),('expected_payement_date','<',d)]
         
 #         return [ ('following_state', '!=', 'PAYE'),('expected_payement_date','<',(date.today() + datetime.timedelta(7)).strftime('%%Y-%%m-%%d') )]
 #         return [('expected_payement_date','<',((date.today()-datetime.timedelta(days=10)).strftime('%Y-%m-%d')))]
