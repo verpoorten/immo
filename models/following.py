@@ -9,6 +9,7 @@ import datetime
 class Following(models.Model):
     _name = 'immo.following'
     _description = "following"
+#     _inherits = [['immo.revision','revision_id'],['immo.revision','charges']]
     _inherits = [['immo.revision','revision_id'],]
     _inherit = 'ir.needaction_mixin'
     _order = 'expected_payement_date'

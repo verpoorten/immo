@@ -13,8 +13,6 @@
 					<field name="date_start" />
 					<field name="date_end" />
 					<field name="rent" />
-					
-					
 					<field name="charges" />
 				</tree>
 			</field>
@@ -27,8 +25,9 @@
 
 			<field name="arch" type="xml">
 				<form string="revision Form">
-				<header>	<button name="wizard_new_revision" type="object"
-    string="Nouvelle révision" /></header>
+				<header>	
+				<button name="wizard_new_revision" type="object" string="Nouvelle révision" />
+				</header>
 					<group col="4">
 						<field name="rent" />
 						<field name="indice_sante" />
@@ -39,18 +38,36 @@
 					</group>
 					<sheet>
 						<notebook>
-							<page string="Rental">
-								<field name="rental_id">
-									<tree>
-										<field name="date_start" />
-										<field name="date_end" />
-									</tree>
-								</field>
+							<page string="Rental" name="rental">
+								<field name="rental_id"/>
+									
+										<field name="note" />
+										
+									
+
 							</page>
 						</notebook>
 					</sheet>
 				</form>
 			</field>
 		</record>
+		
+		<!-- Form form avec followings-->
+        <record model="ir.ui.view" id="revision_form_view_inherit">
+            <field name="name">revision.form.followings</field>
+            <field name="model">immo.revision</field>
+            <field eval="8" name="priority"/>
+            <field name="mode">primary</field>
+            <field name="inherit_id" ref="revision_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='rental']" position="after">
+                    <page string="Followings">
+                        <field name="following_ids"/>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+		
 	</data>
 </openerp>

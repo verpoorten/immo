@@ -12,7 +12,7 @@ class Rental(models.Model):
     _name = 'immo.rental'
     _description = "rental"
     _inherits = [['immo.building','building_id'],]    
-    _rec_name='date_start'
+#     _rec_name='date_start'
     
     contract_date = fields.Date()  
     date_start = fields.Date(required=True)  
@@ -83,4 +83,9 @@ class Rental(models.Model):
                         raise exceptions.ValidationError("La date de début est supérieure à la date de fin")
                     
 
-
+    def name_get(self,cr,uid,ids,context=None):
+        result = {}
+        for record in self.browse(cr,uid,ids,context=context):
+            result[record.id] = str(record.date_start) + " au " + str(record.date_end)
+    
+        return result.items()

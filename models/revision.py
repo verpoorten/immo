@@ -39,3 +39,12 @@ class Revision(models.Model):
             'res_id': wiz_id.id,
             'target': 'new',
         }
+        
+        
+#         
+#     def name_get(self,cr,uid,ids,context=None):
+#         result = {}
+#         for record in self.browse(cr,uid,ids,context=context):
+#             result[record.id] = record.rent + ", " + record.charges
+#     
+#         return result.items()        

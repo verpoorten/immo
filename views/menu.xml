@@ -31,13 +31,15 @@
 			<field name="name">Revisions</field>
 			<field name="res_model">immo.revision</field>
 			<field name="view_type">form</field>
-			<field name="view_mode">tree,form,calendar</field>			
+			<field name="view_mode">tree,form,calendar</field>	
+					
 		</record>
 		<record model="ir.actions.act_window" id="action_list_followings">
 			<field name="name">Followings</field>
 			<field name="res_model">immo.following</field>
 			<field name="view_type">form</field>
-			<field name="view_mode">tree,form,calendar</field>			
+			<field name="view_mode">tree,form,calendar</field>
+<!-- 			<field name="view_id" ref="following_form_primherit_view"/>			 -->
 		</record>
 		<record model="ir.actions.act_window" id="action_list_contracts">
 			<field name="name">Contracts</field>
@@ -60,6 +62,9 @@
 		<menuitem id="menu_rental" parent="menu_immo" name="Rentals" action="action_list_rentals"/>
 		
 		<menuitem id="menu_revision" parent="menu_immo" name="Revisions" action="action_list_revisions"/>
+		
+		
+		
 		<menuitem id="menu_following" parent="menu_immo" name="Followings" action="action_list_followings"/>
 		<menuitem id="menu_contract" parent="menu_immo" name="Contracts" action="action_list_contracts"/>
 		<menuitem id="menu_expense" parent="menu_immo" name="Expenses" action="action_list_expenses"/>
