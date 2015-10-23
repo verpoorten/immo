@@ -23,7 +23,10 @@ class Following(models.Model):
     expected_payement_date = fields.Date()  
     notes = fields.Char()
 #     expected_payement_date = fields.Datetime()
-
+    building_street = fields.Char(string='Building Street',
+                               related='revision_id.rental_id.building_id.street')
+    building_city = fields.Char(string='Building City',related='revision_id.rental_id.building_id.city')
+    
     @api.model        
     def _needaction_domain_get(self): 
         d = date.today() + relativedelta(days=7)
